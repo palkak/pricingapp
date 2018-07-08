@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing Tool</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <button onclick="add()">klick</button>
+    <div id="main"></div>
+</div>
+
+
+<script>
+  $(document).ready(function () {
+    let markets = {
+      uk: {
+        name: "UK",
+        ir: [10, 20],
+        loi: ['uk0-5', 'uk6-9', 'uk10-15'],
+        cpi: [
+          [12, 13],
+          [24, 25],
+          [26, 27]
+        ]
+      },
+      de: {
+        name: "DE",
+        ir: [22, 33, 44],
+        loi: ['de0-5', 'de0-9'],
+        cpi: [
+          [122, 133, 144],
+          [222, 233, 244]
+        ]
+      }
+    };
+    let market = 'de';
+    let ir = 22;
+    let loi = 'de0-9';
+    let cpi = markets[market].cpi[markets[market].ir.indexOf(ir)][markets[market].loi.indexOf(loi)];
+    console.log(cpi);
+  });
+</script>
+</body>
+</html>

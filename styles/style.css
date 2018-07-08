@@ -1,0 +1,10 @@
+body {
+  background-color: grey; }
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: aquamarine;
+  min-height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */
