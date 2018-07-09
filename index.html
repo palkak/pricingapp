@@ -67,11 +67,11 @@
       let currentMarket = marketsNames.indexOf(e.currentTarget.name);
       $('<div>IR</div>').appendTo('#markets-buttons-ir');
       for (let i in data.markets[currentMarket].ir) {
-        $(`<button id="market-button-${data.markets[currentMarket].ir}" name="${data.markets[currentMarket].ir}">${data.markets[currentMarket].ir[i]}</button>`).appendTo('#markets-buttons-ir');
+        $(`<button id="ir-button-${data.markets[currentMarket].ir[i]}" name="${data.markets[currentMarket].ir[i]}">${data.markets[currentMarket].ir[i]}</button>`).appendTo('#markets-buttons-ir');
       }
       $('<div>LOI</div>').appendTo('#markets-buttons-loi');
       for (let i in data.markets[currentMarket].loi) {
-        $(`<button id="market-button-${data.markets[currentMarket].loi}" name="${data.markets[currentMarket].loi}">${data.markets[currentMarket].loi[i]}</button>`).appendTo('#markets-buttons-loi');
+        $(`<button id="loi-button-${data.markets[currentMarket].loi[i]}" name="${data.markets[currentMarket].loi[i]}">${data.markets[currentMarket].loi[i]}</button>`).appendTo('#markets-buttons-loi');
       }
     });
 
