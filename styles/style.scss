@@ -10,3 +10,42 @@ body {
   background-color: aquamarine;
   min-height: 100vh;
 }
+
+#markets-buttons-ir2 {
+  label {
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    width: 120px;
+    position: relative;
+    border: 1px solid gray;
+    &.active {
+      background: red;
+    }
+  }
+  input[type=radio] {
+    float: left;
+    height: 0;
+    visibility: hidden;
+  }
+
+}
+#markets-buttons-loi2 {
+  label {
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    width: 120px;
+    position: relative;
+    border: 1px solid gray;
+    &.active {
+      background: dodgerblue;
+    }
+  }
+  input[type=radio] {
+    float: left;
+    height: 0;
+    visibility: hidden;
+  }
+
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pricing Tool</title>
+    <title>Pricing App</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,14 +11,38 @@
 </head>
 <body>
 <div class="container">
-    <button onclick="add()">klick</button>
     <div id="main"></div>
     <div id="markets-buttons"></div>
     <div id="markets-buttons-ir"></div>
     <div id="markets-buttons-loi"></div>
 
-</div>
 
+    <div id="markets-buttons-ir2">
+        <label for="radio-1" class="input-wrapper-ir">
+            <input type="radio" name="irs" id="radio-1">
+        </label>
+        <label for="radio-2" class="input-wrapper-ir">
+            <input type="radio" name="irs" id="radio-2">
+        </label>
+        <label for="radio-3" class="input-wrapper-ir">
+            <input type="radio" name="irs" id="radio-3">
+        </label>
+    </div>
+    <div id="markets-buttons-loi2">
+        <label for="radio-1" class="input-wrapper-loi">
+            <input type="radio" name="irs" id="radio-1">
+        </label>
+        <label for="radio-2" class="input-wrapper-loi">
+            <input type="radio" name="irs" id="radio-2">
+        </label>
+        <label for="radio-3" class="input-wrapper-loi">
+            <input type="radio" name="irs" id="radio-3">
+        </label>
+        <label for="radio-4" class="input-wrapper-loi">
+            <input type="radio" name="irs" id="radio-4">
+        </label>
+    </div>
+</div>
 
 <script>
   $(document).ready(function () {
@@ -58,8 +82,6 @@
 
     let myMarket = marketsNames.indexOf(marketREQ);
     let myCpi = data.markets[myMarket].cpi[data.markets[myMarket].ir.indexOf(irREQ)][data.markets[myMarket].loi.indexOf(loiREQ)];
-    console.log(myMarket);
-    console.log(data);
 
     $("#markets-buttons button").click(function (e) {
       $('#markets-buttons-ir').empty();
@@ -75,7 +97,27 @@
       }
     });
 
+    let $optionsIr = $('label.input-wrapper-ir');
 
+    $optionsIr.click(function(e){
+      let $current = $(this);
+      e.preventDefault();
+      e.stopPropagation();
+      $optionsIr.removeClass('active');
+      $current.addClass('active');
+      $('input', $current).prop('checked');
+    });
+
+    let $optionsLoi = $('label.input-wrapper-loi');
+
+    $optionsLoi.click(function(e){
+      let $current = $(this);
+      e.preventDefault();
+      e.stopPropagation();
+      $optionsLoi.removeClass('active');
+      $current.addClass('active');
+      $('input', $current).prop('checked');
+    });
   })
   ;
 </script>

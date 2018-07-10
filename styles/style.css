@@ -7,4 +7,32 @@ body {
   background-color: aquamarine;
   min-height: 100vh; }
 
+#markets-buttons-ir2 label {
+  cursor: pointer;
+  display: inline-block;
+  height: 100px;
+  width: 120px;
+  position: relative;
+  border: 1px solid gray; }
+  #markets-buttons-ir2 label.active {
+    background: red; }
+#markets-buttons-ir2 input[type=radio] {
+  float: left;
+  height: 0;
+  visibility: hidden; }
+
+#markets-buttons-loi2 label {
+  cursor: pointer;
+  display: inline-block;
+  height: 100px;
+  width: 120px;
+  position: relative;
+  border: 1px solid gray; }
+  #markets-buttons-loi2 label.active {
+    background: dodgerblue; }
+#markets-buttons-loi2 input[type=radio] {
+  float: left;
+  height: 0;
+  visibility: hidden; }
+
 /*# sourceMappingURL=style.css.map */
