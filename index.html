@@ -19,27 +19,27 @@
 
     <div id="markets-buttons-ir2">
         <label for="radio-1" class="input-wrapper-ir">
-            <input type="radio" name="irs" id="radio-1">
+            <input type="radio" value="ir-1" name="ir" id="radio-1">
         </label>
         <label for="radio-2" class="input-wrapper-ir">
-            <input type="radio" name="irs" id="radio-2">
+            <input type="radio" value="ir-2" name="ir" id="radio-2">
         </label>
         <label for="radio-3" class="input-wrapper-ir">
-            <input type="radio" name="irs" id="radio-3">
+            <input type="radio" value="ir-3" name="ir" id="radio-3">
         </label>
     </div>
     <div id="markets-buttons-loi2">
         <label for="radio-1" class="input-wrapper-loi">
-            <input type="radio" name="irs" id="radio-1">
+            <input type="radio" value="loi-1" name="loi" id="radio-1">
         </label>
         <label for="radio-2" class="input-wrapper-loi">
-            <input type="radio" name="irs" id="radio-2">
+            <input type="radio" value="loi-2" name="loi" id="radio-2">
         </label>
         <label for="radio-3" class="input-wrapper-loi">
-            <input type="radio" name="irs" id="radio-3">
+            <input type="radio" value="loi-3" name="loi" id="radio-3">
         </label>
         <label for="radio-4" class="input-wrapper-loi">
-            <input type="radio" name="irs" id="radio-4">
+            <input type="radio" value="loi-4" name="loi" id="radio-4">
         </label>
     </div>
 </div>
@@ -105,7 +105,8 @@
       e.stopPropagation();
       $optionsIr.removeClass('active');
       $current.addClass('active');
-      $('input', $current).prop('checked');
+      $('input', $current).prop('checked', true);
+      console.log($('input[name=ir]:checked').val());
     });
 
     let $optionsLoi = $('label.input-wrapper-loi');
@@ -116,7 +117,8 @@
       e.stopPropagation();
       $optionsLoi.removeClass('active');
       $current.addClass('active');
-      $('input', $current).prop('checked');
+      $('input', $current).prop('checked', true);
+      console.log($('input[name=loi]:checked').val());
     });
   })
   ;
