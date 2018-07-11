@@ -4,19 +4,19 @@ body {
 .container {
   width: 1280px;
   margin: 0 auto;
-  background-color: aquamarine;
+  background-color: #F5f5F5;
   min-height: 100vh; }
 
-#markets-buttons-ir2 label {
+#markets-buttons-ir label {
   cursor: pointer;
   display: inline-block;
   height: 100px;
   width: 120px;
   position: relative;
   border: 1px solid gray; }
-  #markets-buttons-ir2 label.active {
+  #markets-buttons-ir label.active {
     background: red; }
-#markets-buttons-ir2 input[type=radio] {
+#markets-buttons-ir input[type=radio] {
   float: left;
   height: 0;
   visibility: hidden; }

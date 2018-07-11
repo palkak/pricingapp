@@ -13,29 +13,29 @@
 <div class="container">
     <div id="main"></div>
     <div id="markets-buttons"></div>
-    <div id="markets-buttons-ir"></div>
+    <div id="markets-buttons-ir"> </div>
     <div id="markets-buttons-loi"></div>
 
 
-    <div id="markets-buttons-ir2">
-        <label for="radio-1" class="input-wrapper-ir">
-            <input type="radio" value=10 name="ir" id="radio-1">
-        </label>
-        <label for="radio-2" class="input-wrapper-ir">
-            <input type="radio" value=20 name="ir" id="radio-2">
-        </label>
-    </div>
-    <div id="markets-buttons-loi2">
-        <label for="radio-1" class="input-wrapper-loi">
-            <input type="radio" value="uk0-5" name="loi" id="radio-1">
-        </label>
-        <label for="radio-2" class="input-wrapper-loi">
-            <input type="radio" value="uk6-9" name="loi" id="radio-2">
-        </label>
-        <label for="radio-3" class="input-wrapper-loi">
-            <input type="radio" value="uk10-15" name="loi" id="radio-3">
-        </label>
-    </div>
+    <!--<div id="markets-buttons-ir2">-->
+        <!--<label for="radio-1" class="input-wrapper-ir">-->
+            <!--<input type="radio" value=10 name="ir" id="radio-1">-->
+        <!--</label>-->
+        <!--<label for="radio-2" class="input-wrapper-ir">-->
+            <!--<input type="radio" value=20 name="ir" id="radio-2">-->
+        <!--</label>-->
+    <!--</div>-->
+    <!--<div id="markets-buttons-loi2">-->
+        <!--<label for="radio-1" class="input-wrapper-loi">-->
+            <!--<input type="radio" value="uk0-5" name="loi" id="radio-1">-->
+        <!--</label>-->
+        <!--<label for="radio-2" class="input-wrapper-loi">-->
+            <!--<input type="radio" value="uk6-9" name="loi" id="radio-2">-->
+        <!--</label>-->
+        <!--<label for="radio-3" class="input-wrapper-loi">-->
+            <!--<input type="radio" value="uk10-15" name="loi" id="radio-3">-->
+        <!--</label>-->
+    <!--</div>-->
 </div>
 
 <script>
@@ -82,7 +82,10 @@
       let currentMarket = marketsNames.indexOf(e.currentTarget.name);
       $('<div>IR</div>').appendTo('#markets-buttons-ir');
       for (let i in data.markets[currentMarket].ir) {
-        $(`<button id="ir-button-${data.markets[currentMarket].ir[i]}" name="${data.markets[currentMarket].ir[i]}">${data.markets[currentMarket].ir[i]}</button>`).appendTo('#markets-buttons-ir');
+        //$(`<button id="ir-button-${data.markets[currentMarket].ir[i]}" name="${data.markets[currentMarket].ir[i]}">${data.markets[currentMarket].ir[i]}</button>`).appendTo('#markets-buttons-ir');
+        $(`<label for="radio-${i}" class="input-wrapper-ir">
+          <input type="radio" value=${data.markets[currentMarket].ir[i]} name="ir" id="radio-${i}">
+          </label>`).appendTo('#markets-buttons-ir');
       }
       $('<div>LOI</div>').appendTo('#markets-buttons-loi');
       for (let i in data.markets[currentMarket].loi) {
